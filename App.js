@@ -31,8 +31,8 @@ export default class App extends React.Component {
       try {
         let fixedOperation = display.split("x").join("*");
         fixedOperation = fixedOperation.split("÷").join("/");
-        fixedOperation = fixedOperation.split(',').join('.')
-        result = new String(eval(fixedOperation)).toString();
+        fixedOperation = fixedOperation.split(",").join(".");
+        result = String(eval(fixedOperation)).toString();
       } catch (e) {}
       this.setState({
         display,
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
   btnText: {
     textAlign: "center",
     fontSize: 30,
-    color: 'white'
+    color: "white"
   },
   col2: {
     flex: 1,
